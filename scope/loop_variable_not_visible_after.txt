@@ -1,0 +1,4 @@
+FOR (LET i : int = 0; i < 3; i = i + 1) {
+  PRINT(i);
+}
+PRINT(i);

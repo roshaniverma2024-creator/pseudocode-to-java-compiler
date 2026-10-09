@@ -1,0 +1,4 @@
+{
+  LET inner : int = 1;
+}
+PRINT(inner);

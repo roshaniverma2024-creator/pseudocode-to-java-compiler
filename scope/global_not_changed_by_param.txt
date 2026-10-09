@@ -1,0 +1,4 @@
+LET n : int = 10;
+FUNCTION f(n : int) : int { RETURN n + 1; }
+PRINT(f(1));
+PRINT(n);

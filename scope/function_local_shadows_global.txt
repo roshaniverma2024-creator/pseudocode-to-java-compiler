@@ -1,0 +1,4 @@
+LET count : int = 100;
+FUNCTION f() : int { LET count : int = 1; RETURN count + 1; }
+PRINT(f());
+PRINT(count);

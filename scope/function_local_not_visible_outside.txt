@@ -1,0 +1,3 @@
+FUNCTION f() : int { LET hidden : int = 7; RETURN hidden; }
+PRINT(f());
+PRINT(hidden);

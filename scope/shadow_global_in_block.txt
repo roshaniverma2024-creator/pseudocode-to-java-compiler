@@ -1,0 +1,6 @@
+LET x : int = 1;
+{
+  LET x : int = 2;
+  PRINT(x);
+}
+PRINT(x);

@@ -1,0 +1,2 @@
+{ LET t : int = 1; PRINT(t); }
+{ LET t : int = 2; PRINT(t); }
