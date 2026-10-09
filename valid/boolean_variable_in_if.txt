@@ -1,0 +1,2 @@
+LET flag : boolean = 3 > 2;
+IF (flag) { PRINT("yes"); } ELSE { PRINT("no"); }

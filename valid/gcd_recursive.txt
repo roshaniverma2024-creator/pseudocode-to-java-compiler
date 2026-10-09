@@ -1,0 +1,5 @@
+FUNCTION gcd(a : int, b : int) : int {
+  IF (b == 0) { RETURN a; }
+  RETURN gcd(b, a - (a / b) * b);
+}
+PRINT(gcd(48, 18));

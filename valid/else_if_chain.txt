@@ -1,0 +1,2 @@
+LET s : int = 55;
+IF (s >= 90) { PRINT("A"); } ELSE IF (s >= 80) { PRINT("B"); } ELSE IF (s >= 60) { PRINT("C"); } ELSE { PRINT("F"); }

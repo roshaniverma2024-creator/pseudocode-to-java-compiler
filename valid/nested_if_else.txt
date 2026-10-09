@@ -1,0 +1,10 @@
+LET score : int = 85;
+IF (score >= 90) {
+  PRINT("A");
+} ELSE {
+  IF (score >= 80) {
+    PRINT("B");
+  } ELSE {
+    PRINT("C");
+  }
+}

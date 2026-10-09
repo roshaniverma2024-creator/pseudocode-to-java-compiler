@@ -1,0 +1,11 @@
+FUNCTION fib(n : int) : int {
+  LET a : int = 0;
+  LET b : int = 1;
+  FOR (LET i : int = 0; i < n; i = i + 1) {
+    LET t : int = a + b;
+    a = b;
+    b = t;
+  }
+  RETURN a;
+}
+PRINT(fib(10));

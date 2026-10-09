@@ -1,0 +1,6 @@
+LET x : string = "h";
+LET a : string = x + "i";
+LET b : string = "hi";
+PRINT(a == b);
+PRINT(a != b);
+PRINT(a == "ho");

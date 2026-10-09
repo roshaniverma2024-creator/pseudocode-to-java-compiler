@@ -1,0 +1,4 @@
+FUNCTION isEven(n : int) : boolean { IF (n == 0) { RETURN true; } RETURN isOdd(n - 1); }
+FUNCTION isOdd(n : int) : boolean { IF (n == 0) { RETURN false; } RETURN isEven(n - 1); }
+PRINT(isEven(10));
+PRINT(isOdd(7));

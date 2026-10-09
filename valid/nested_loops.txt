@@ -1,0 +1,7 @@
+FOR (LET i : int = 1; i <= 3; i = i + 1) {
+  LET row : string = "";
+  FOR (LET j : int = 1; j <= 3; j = j + 1) {
+    row = row + (i * j) + ";";
+  }
+  PRINT(row);
+}

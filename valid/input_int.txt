@@ -1,0 +1,4 @@
+PRINT("Enter a number:");
+LET n : int = 0;
+INPUT(n);
+PRINT(n * 2);

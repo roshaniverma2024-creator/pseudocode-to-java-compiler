@@ -1,0 +1,5 @@
+LET a : int = 7;
+LET b : float = 2.0;
+PRINT(a / b);
+PRINT(a / 2);
+PRINT(a + b);

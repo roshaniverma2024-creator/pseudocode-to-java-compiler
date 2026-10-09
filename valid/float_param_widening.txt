@@ -1,0 +1,2 @@
+FUNCTION half(x : float) : float { RETURN x / 2; }
+PRINT(half(5));

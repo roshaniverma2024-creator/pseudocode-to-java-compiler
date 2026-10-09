@@ -1,0 +1,5 @@
+LET name : string = "Roshani";
+LET n : int = 3;
+PRINT("Hello, " + name + "!");
+PRINT("n = " + n);
+PRINT(n + 1 + " items");

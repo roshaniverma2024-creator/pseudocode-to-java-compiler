@@ -1,0 +1,8 @@
+FUNCTION sign(x : int) : string {
+  IF (x < 0) { RETURN "negative"; }
+  IF (x == 0) { RETURN "zero"; }
+  RETURN "positive";
+}
+PRINT(sign(-5));
+PRINT(sign(0));
+PRINT(sign(7));

@@ -1,0 +1,3 @@
+FUNCTION add(a : int, b : int) : int { RETURN a + b; }
+FUNCTION twice(x : int) : int { RETURN add(x, x); }
+PRINT(add(twice(2), twice(3)));

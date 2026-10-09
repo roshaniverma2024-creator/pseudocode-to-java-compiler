@@ -1,0 +1,7 @@
+LET name : string = "";
+LET score : float = 0.0;
+LET passed : boolean = false;
+INPUT(name);
+INPUT(score);
+INPUT(passed);
+PRINT(name + " " + score + " " + passed);

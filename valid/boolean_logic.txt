@@ -1,0 +1,7 @@
+LET a : int = 5;
+LET b : int = 10;
+PRINT(a < b AND b < 20);
+PRINT(a > b OR b == 10);
+PRINT(a > b AND b == 10);
+LET ok : boolean = a != b;
+PRINT(ok);

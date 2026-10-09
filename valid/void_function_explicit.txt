@@ -1,0 +1,5 @@
+FUNCTION hello() : void {
+  PRINT("hi");
+  RETURN;
+}
+hello();

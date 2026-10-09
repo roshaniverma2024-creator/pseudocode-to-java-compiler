@@ -1,0 +1,10 @@
+LET n : int = 5;
+FUNCTION factorial(k : int) : int {
+  IF (k <= 1) {
+    RETURN 1;
+  } ELSE {
+    RETURN k * factorial(k - 1);
+  }
+}
+LET result : int = factorial(n);
+PRINT(result);

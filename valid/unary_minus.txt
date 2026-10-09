@@ -1,0 +1,4 @@
+LET a : int = 4;
+PRINT(-a);
+PRINT(-(a + 1) * 2);
+PRINT(3 - -a);

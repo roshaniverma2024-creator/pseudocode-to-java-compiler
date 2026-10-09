@@ -1,0 +1,5 @@
+LET a = 5;
+LET b = a * 2.5;
+LET s = "x" + a;
+PRINT(b);
+PRINT(s);

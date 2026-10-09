@@ -1,0 +1,10 @@
+FUNCTION isPrime(n : int) : boolean {
+  IF (n < 2) { RETURN false; }
+  FOR (LET d : int = 2; d * d <= n; d = d + 1) {
+    IF (n - (n / d) * d == 0) { RETURN false; }
+  }
+  RETURN true;
+}
+FOR (LET k : int = 1; k <= 10; k = k + 1) {
+  IF (isPrime(k)) { PRINT(k); }
+}

@@ -1,0 +1,7 @@
+LET i : int = 1;
+LET sum : int = 0;
+WHILE (i <= 10) {
+  sum = sum + i;
+  i = i + 1;
+}
+PRINT(sum);

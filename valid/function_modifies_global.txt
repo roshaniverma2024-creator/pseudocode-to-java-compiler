@@ -1,0 +1,6 @@
+LET counter : int = 0;
+FUNCTION bump() { counter = counter + 1; }
+bump();
+bump();
+bump();
+PRINT(counter);

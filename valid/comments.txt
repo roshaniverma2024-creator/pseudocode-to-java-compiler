@@ -1,0 +1,3 @@
+// a whole-line comment
+PRINT(1); // a trailing comment
+PRINT(2);

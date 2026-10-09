@@ -1,0 +1,2 @@
+PRINT(twice(4));
+FUNCTION twice(x : int) : int { RETURN x * 2; }

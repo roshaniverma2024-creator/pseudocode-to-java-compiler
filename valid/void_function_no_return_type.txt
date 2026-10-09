@@ -1,0 +1,5 @@
+FUNCTION banner(text : string) {
+  PRINT("== " + text + " ==");
+}
+banner("start");
+banner("end");

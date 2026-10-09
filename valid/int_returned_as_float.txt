@@ -1,0 +1,2 @@
+FUNCTION f() : float { RETURN 1; }
+PRINT(f());
