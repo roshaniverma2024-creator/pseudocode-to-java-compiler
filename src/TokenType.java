@@ -1,0 +1,22 @@
+public enum TokenType {
+    // Keywords
+    LET, IF, ELSE, WHILE, FOR, FUNCTION, RETURN, PRINT, INPUT,
+    
+    // Primitive Types & Literals
+    TYPE_INT, TYPE_FLOAT, TYPE_BOOLEAN, TYPE_STRING,
+    INTEGER_LITERAL, FLOAT_LITERAL, STRING_LITERAL, BOOLEAN_LITERAL,
+    
+    // Identifiers
+    IDENTIFIER,
+    
+    // Operators
+    ASSIGN, PLUS, MINUS, STAR, SLASH,
+    EQUAL, NOT_EQUAL, LESS_THAN, GREATER_THAN, LESS_EQUAL, GREATER_EQUAL,
+    AND, OR,
+    
+    // Delimiters
+    SEMICOLON, COLON, COMMA,
+    LPAREN, RPAREN, LBRACE, RBRACE,
+    
+    EOF
+}
