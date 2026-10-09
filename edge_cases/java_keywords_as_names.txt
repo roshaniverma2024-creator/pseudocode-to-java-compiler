@@ -1,0 +1,4 @@
+LET class : int = 1;
+LET new : int = 2;
+LET System : int = 3;
+PRINT(class + new + System);

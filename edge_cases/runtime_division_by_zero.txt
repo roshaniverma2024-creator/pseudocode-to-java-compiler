@@ -1,0 +1,2 @@
+LET z : int = 0;
+PRINT(10 / z);

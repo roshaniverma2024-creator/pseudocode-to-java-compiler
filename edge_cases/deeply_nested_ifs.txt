@@ -1,0 +1,2 @@
+LET v : int = 5;
+IF (v > 0) { IF (v > 1) { IF (v > 2) { IF (v > 3) { IF (v > 4) { PRINT("deep"); } } } } }

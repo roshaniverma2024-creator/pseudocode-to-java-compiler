@@ -1,0 +1,3 @@
+PRINT("a\"b");
+PRINT("tab\there");
+PRINT("back\\slash");

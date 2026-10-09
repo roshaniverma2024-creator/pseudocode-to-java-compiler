@@ -1,0 +1,9 @@
+FUNCTION firstOver(limit : int) : int {
+  LET i : int = 0;
+  WHILE (true) {
+    IF (i > limit) { RETURN i; }
+    i = i + 1;
+  }
+  RETURN -1;
+}
+PRINT(firstOver(3));

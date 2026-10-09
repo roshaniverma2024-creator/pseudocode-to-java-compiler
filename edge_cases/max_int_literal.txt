@@ -1,0 +1,2 @@
+LET big : int = 2147483647;
+PRINT(big);

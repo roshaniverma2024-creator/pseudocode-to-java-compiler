@@ -1,0 +1,2 @@
+FUNCTION pi() : float { RETURN 3.14; }
+PRINT(pi());
