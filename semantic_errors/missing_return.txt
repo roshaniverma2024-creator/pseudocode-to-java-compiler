@@ -1,0 +1,4 @@
+FUNCTION f(a : int) : int {
+  IF (a > 0) { RETURN 1; }
+}
+PRINT(f(1));

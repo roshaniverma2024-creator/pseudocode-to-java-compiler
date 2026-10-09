@@ -1,0 +1,2 @@
+FUNCTION f() { PRINT(1); }
+FUNCTION f() { PRINT(2); }

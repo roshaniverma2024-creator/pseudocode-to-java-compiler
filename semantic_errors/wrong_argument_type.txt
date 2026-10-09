@@ -1,0 +1,2 @@
+FUNCTION f(a : int) : int { RETURN a; }
+PRINT(f("x"));

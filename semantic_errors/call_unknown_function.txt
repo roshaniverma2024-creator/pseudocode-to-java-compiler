@@ -1,0 +1,1 @@
+PRINT(nothing(1));

@@ -1,0 +1,2 @@
+LET a : int = 5;
+LET a : int = 6;

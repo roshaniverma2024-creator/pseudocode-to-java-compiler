@@ -1,0 +1,4 @@
+FUNCTION f() : int {
+  RETURN 1;
+  PRINT("never");
+}

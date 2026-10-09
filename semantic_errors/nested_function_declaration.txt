@@ -1,0 +1,3 @@
+FUNCTION outer() {
+  FUNCTION inner() { PRINT(1); }
+}

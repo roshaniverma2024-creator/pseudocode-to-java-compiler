@@ -1,0 +1,2 @@
+FUNCTION g() : void { PRINT("x"); }
+PRINT(g());
