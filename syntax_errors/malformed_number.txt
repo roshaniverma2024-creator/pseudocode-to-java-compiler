@@ -1,0 +1,1 @@
+LET x : int = 12abc;

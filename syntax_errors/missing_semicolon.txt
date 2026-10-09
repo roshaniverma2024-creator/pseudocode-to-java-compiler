@@ -1,0 +1,2 @@
+LET x : int = 5
+PRINT(x);
