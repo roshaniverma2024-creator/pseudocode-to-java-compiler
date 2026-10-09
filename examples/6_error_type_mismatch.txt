@@ -1,0 +1,4 @@
+// Semantic error: a string cannot be stored in an int
+LET age : int = 20;
+LET label : int = "twenty";
+PRINT(age);

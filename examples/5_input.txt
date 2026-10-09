@@ -1,0 +1,9 @@
+// INPUT reads one line from the keyboard into an existing variable
+PRINT("Enter your age:");
+LET age : int = 0;
+INPUT(age);
+IF (age >= 18) {
+  PRINT("adult, next year you will be " + (age + 1));
+} ELSE {
+  PRINT("minor");
+}

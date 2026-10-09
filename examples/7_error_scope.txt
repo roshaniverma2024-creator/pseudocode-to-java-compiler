@@ -1,0 +1,5 @@
+// Semantic error: the loop variable i only exists inside the loop
+FOR (LET i : int = 0; i < 3; i = i + 1) {
+  PRINT(i);
+}
+PRINT(i);

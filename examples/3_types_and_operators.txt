@@ -1,0 +1,13 @@
+// int, float, boolean, string, implicit int -> float widening, AND / OR, string concatenation
+LET price : float = 19.5;
+LET qty : int = 4;
+LET total : float = price * qty;
+PRINT("total = " + total);
+
+LET name : string = "Roshani";
+PRINT("Hello, " + name + "!");
+
+LET adult : boolean = 21 >= 18;
+LET cheap : boolean = total < 50.0;
+PRINT(adult AND cheap);
+PRINT(name == "Roshani");

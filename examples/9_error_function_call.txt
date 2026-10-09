@@ -1,0 +1,5 @@
+// Semantic error: wrong number of arguments
+FUNCTION add(a : int, b : int) : int {
+  RETURN a + b;
+}
+PRINT(add(1));

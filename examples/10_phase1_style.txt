@@ -1,0 +1,5 @@
+// Phase 1 programs (no type annotations, no PRINT) still compile
+LET a = 5;
+LET b = 3;
+LET c = a + b * 2;
+LET d = c - a / a;

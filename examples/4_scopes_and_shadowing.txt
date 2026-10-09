@@ -1,0 +1,22 @@
+// Nested scopes: an inner LET hides the outer variable only inside its own block
+LET x : int = 1;
+PRINT("outer x = " + x);
+{
+  LET x : int = 2;
+  PRINT("inner x = " + x);
+  {
+    LET x : int = 3;
+    PRINT("innermost x = " + x);
+  }
+  PRINT("inner x again = " + x);
+}
+PRINT("outer x again = " + x);
+
+// a function can read and change a global variable
+LET counter : int = 0;
+FUNCTION bump() {
+  counter = counter + 1;
+}
+bump();
+bump();
+PRINT("counter = " + counter);

@@ -1,0 +1,21 @@
+// WHILE, FOR, nested loops and an ELSE IF chain
+LET total : int = 0;
+FOR (LET i : int = 1; i <= 5; i = i + 1) {
+  total = total + i;
+}
+PRINT("sum 1..5 = " + total);
+
+LET count : int = 3;
+WHILE (count > 0) {
+  PRINT("countdown: " + count);
+  count = count - 1;
+}
+
+LET score : int = 72;
+IF (score >= 90) {
+  PRINT("grade A");
+} ELSE IF (score >= 70) {
+  PRINT("grade B");
+} ELSE {
+  PRINT("grade C");
+}
