@@ -1,0 +1,1 @@
+LET bad = undeclared + 1;

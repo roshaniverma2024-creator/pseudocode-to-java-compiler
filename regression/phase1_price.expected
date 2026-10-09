@@ -1,0 +1,5 @@
+price = 100
+qty = 4
+total = 400
+discount = 40
+finalAmount = 360

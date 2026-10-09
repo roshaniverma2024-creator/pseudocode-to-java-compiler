@@ -1,0 +1,5 @@
+LET price = 100;
+LET qty = 4;
+LET total = price * qty;
+LET discount = total / 10;
+LET finalAmount = total - discount;
