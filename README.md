@@ -1,4 +1,4 @@
-# Pseudocode-to-Java Compiler — Phase 2 (Review 2)
+# Pseudocode-to-Java Compiler — Phase 3 (Final)
 
 A hand-written compiler (no parser generators) that translates a small typed pseudocode language into
 Java, then **compiles and runs the Java** so you see the real result. Every stage prints what it produced.
@@ -17,6 +17,9 @@ javac -encoding UTF-8 -d out src/*.java        # build
 java -cp out Main                               # built-in factorial demo
 java -cp out Main examples/1_factorial.txt      # any pseudocode file
 java -cp out TestRunner tests                   # run the whole test suite
+java -cp out CompilerVisualizer                 # open the live Swing visualizer
+java -cp out DiagnosticsCli examples/phase3_multiple_errors.txt # collect independent semantic errors
+java -cp out PerformanceRunner 10                # benchmark compiler stages and end-to-end runs
 ```
 
 `java -cp out Main yourprogram.txt` prints, in order: SOURCE, TOKENS, AST (tree), SEMANTIC ANALYSIS +
@@ -74,12 +77,12 @@ Keywords are case-sensitive (`PRINT`, not `print`; types are lowercase). `//` st
 | Syntax analysis | `Parser`, `ASTNode` + 19 node classes: `AssignStmt`, `IfStmt`, `WhileStmt`, `ForStmt`, `Block`, `FunctionDecl`, `ReturnStmt`, `PrintStmt`, `InputStmt`, `CallExpr`, `BinaryExpr`, `RelationalExpr`, `LogicalExpr`, `UnaryExpr`, `IdentifierExpr`, `IntegerLiteral`, `FloatLiteral`, `StringLiteral`, `BooleanLiteral` |
 | Semantic analysis | `SymbolTable` (scope stack + function table), `SemanticAnalyzer`, `CompileError` |
 | Code generation | `CodeGenerator` |
-| Driver / display | `Main`, `AstPrinter` (tree), `TablePrinter` (tables), `Executor` (javac + run) |
-| Testing | `TestRunner` |
+| Driver / display | `Main`, `CompilerVisualizer` (live Swing UI), `AstPrinter` (tree), `TablePrinter` (tables), `Executor` (javac + run) |
+| Diagnostics / performance / testing | `DiagnosticsCli`, `PerformanceRunner`, `TestRunner` |
 
 ## Tests (`tests/`)
 
-100 end-to-end programs plus 46 unit tests — all passing. Each `tests/<category>/<name>.txt` has
+100 end-to-end programs plus 48 unit tests — 148 checks passing. Each `tests/<category>/<name>.txt` has
 `.expected` (exact output), `.error` (`Stage|line|text` that the error must match), `.runtime`
 (text expected in a run-time crash) and optionally `.in` (keyboard input).
 
@@ -100,4 +103,12 @@ Keywords are case-sensitive (`PRINT`, not `print`; types are lowercase). `//` st
 - **Constant loop conditions** (`WHILE (false)`) are wrapped in `Boolean.valueOf(...)`; otherwise javac reports unreachable code.
 - **Minimal parentheses**: the generator only adds `( )` where precedence needs them, so the Java reads naturally.
 - A program with **no `PRINT`** prints the final value of each top-level variable (keeps Phase 1 programs visible).
-- Error recovery (reporting several errors in one run) is planned for Phase 3; Phase 2 stops at the first error.
+- Phase 3 adds a live Swing visualizer and a recovery CLI for independent top-level semantic errors. Lexical and syntax failures remain fail-fast; semantic recovery removes each failing top-level construct and rechecks the remaining program, so errors inside the same construct are reported once.
+
+
+## Phase 3 additions
+
+- **Interactive visualizer:** launch `CompilerVisualizer` to edit a program and see tokens, the AST, scope and symbol information, and generated Java refresh as you type. Use Open file, Save source, and Compile and run for local files and execution.
+- **Recoverable semantic diagnostics:** `DiagnosticsCli <program.txt>` reports independent semantic errors from separate top-level constructs in one pass. Lexical and parser errors still stop that diagnostic run; nested errors are reported once at their enclosing top-level construct.
+- **Performance measurements:** `PerformanceRunner [iterations]` performs three warm-up rounds, then measures lex/parse/semantic/codegen and full generated Java compilation/execution, reporting mean, median, minimum, and maximum times. Results vary by machine and JDK.
+- **Final project report:** see `docs/Phase3_Final_Report.md`.

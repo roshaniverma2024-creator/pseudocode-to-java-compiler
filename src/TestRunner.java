@@ -211,6 +211,11 @@ public class TestRunner {
         CompileError pos = errorOf("LET a : int = 1;\nPRINT(a + zz);");
         check("semantic: errors carry line and column", pos != null && pos.line == 2 && pos.column == 11, pos == null ? "no error" : pos.line + ":" + pos.column);
 
+        // ---- Phase 3 semantic recovery ----
+        List<CompileError> recovered = DiagnosticsCli.analyze("LET first : int = missing;\nLET second : boolean = 7;\nLET third : int = \"wrong\";\n");
+        check("phase 3: independent semantic errors are all reported", recovered.size() == 3, String.valueOf(recovered.size()));
+        check("phase 3: recovery preserves source order", recovered.size() == 3 && recovered.get(0).line == 1 && recovered.get(1).line == 2 && recovered.get(2).line == 3);
+
         // ---- CodeGenerator ----
         String g1 = generate("LET f : float = 1; PRINT(f);");
         check("codegen: float becomes double", g1.contains("private static double f;"));

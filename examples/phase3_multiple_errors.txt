@@ -1,0 +1,4 @@
+LET first : int = missing;
+LET second : boolean = 7;
+LET third : int = "wrong";
+LET safe : int = 4;
